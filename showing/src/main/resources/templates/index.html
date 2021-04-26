@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>电影排行榜</title>
+</head>
+<body>
+<table border="1" align="center">
+    <h3 align="center">排行榜 Top5</h3>
+    <tr>
+        <th>MovieName</th>
+        <th>Score</th>
+<!--        <th>Nums</th>-->
+    </tr>
+    <tr th:each="ele:${list}">
+        <th th:text="${ele.getMovie_id()}"></th>
+        <th th:text="${ele.getScore()}"></th>
+<!--        <th th:text="${ele.getNum()}"></th>-->
+    </tr>
+</table>
+
+</body>
+</html>
